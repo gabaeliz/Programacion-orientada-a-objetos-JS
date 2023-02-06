@@ -10,4 +10,8 @@ export class CuentaCorriente extends Cuenta {
         super(cliente, numero, agencia, 0);//llamamos al constructor de la clase padre (Cuenta)
         CuentaCorriente.cantidadCuentas++;
     }
+
+    retirarDeCuenta(valor) {
+        super._retirarDeCuenta(valor, 2);
+    }
 }

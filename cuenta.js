@@ -17,6 +17,12 @@ export class Cuenta {
 
     //La comision del 5% unicamente se esta aplicando a la cuenta corriente
     retirarDeCuenta(valor) {
+        _retirarDeCuenta(valor, 0);
+    }
+
+    //Se define que el metodo es privado
+    _retirarDeCuenta(valor, comision) {
+        valor = valor * (1 + comision / 100);
         if (valor <= this.#saldo)
             this.#saldo -= valor;
         return valor;
