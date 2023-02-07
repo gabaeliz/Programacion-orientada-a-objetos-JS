@@ -1,7 +1,6 @@
 /*El atributo estatico va a estar accesible a todas las instancias, se atribuye su valor directo en el metodo*/
-
-import { Cliente } from "./cliente.js";
-import { Cuenta } from "./cuenta.js";
+import { Cliente } from "./Cliente.js";
+import { Cuenta } from "./Cuenta.js";
 
 export class CuentaCorriente extends Cuenta {
     static cantidadCuentas = 0;
@@ -12,6 +11,6 @@ export class CuentaCorriente extends Cuenta {
     }
 
     retirarDeCuenta(valor) {
-        super._retirarDeCuenta(valor, 2);
+        super._retirarDeCuenta(valor, 5);
     }
 }
