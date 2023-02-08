@@ -11,6 +11,7 @@ import { SistemaAutentificacion } from './sistemaAutentificacion.js';
 
 
 const cliente = new Cliente('Elizabeth', '165498795', '654679865');
+cliente.asignarClave('12548');
 const cuentaDeEli = new CuentaAhorro(cliente, '1', '001', 0);
 
 let saldo = cuentaDeEli.verSaldo();
@@ -48,11 +49,17 @@ console.log(cuentaAhorroEli);
 
 
 const empleado = new Empleado ('Adhara Bravo', '132457878', 10000);
-empleado.asignarClase('15478');
+empleado.asignarClave('15478');
 const gerente = new Gerente ('Anali Bravo', '7897987987', 15000);
+gerente.asignarClave('65421');
 const director = new Director ('Ximena Garcia', '56879892', 25000);
+director.asignarClave('89654');
 console.log(empleado.verBonificacion());
 console.log(gerente.verBonificacion());
 console.log(director.verBonificacion());
 
 console.log(SistemaAutentificacion.login(empleado, '15478'));
+console.log(SistemaAutentificacion.login(gerente, '65421'));
+console.log(SistemaAutentificacion.login(director, '65421'));
+console.log(SistemaAutentificacion.login(cliente, '12548'));
+
