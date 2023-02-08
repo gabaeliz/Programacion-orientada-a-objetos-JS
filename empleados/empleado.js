@@ -1,9 +1,29 @@
 export class Empleado {
     #nombre;
     #dni;
+    #salario;
+    #clave;
 
-    constructor(nombre, dni) {
+    constructor(nombre, dni, salario) {
         this.#nombre = nombre;
         this.#dni = dni;
+        this.#salario = salario;
+        this.#clave = ''; 
+    }
+
+    asignarClase(clave){
+        this.#clave = clave;
+    }
+
+     get clave(){
+        return this.#clave;
+    }
+
+    verBonificacion(){
+        return this.#salario;
+    }
+
+    _verBonificacion(bono){
+        return this.#salario + (this.#salario + bono)/100
     }
 }

@@ -1,5 +1,5 @@
 /*El atributo estatico va a estar accesible a todas las instancias, se atribuye su valor directo en el metodo*/
-import { Cliente } from "../empleados/cliente.js";
+import { Cliente } from "../cliente.js";
 import { Cuenta } from "./Cuenta.js";
 
 export class CuentaCorriente extends Cuenta {
